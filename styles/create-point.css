@@ -1,0 +1,89 @@
+#page-create-point {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2.88rem;
+}
+
+#logoIcon {
+  transition: 0.2s;
+}
+
+#logoIcon:hover {
+  opacity: 0.85;
+}
+
+#logoIcon img {
+  width: 11.3rem;
+  height: 2.75rem;
+}
+
+#headerRight {
+  display: flex;
+  align-items: center;
+  color: var(--title);
+  font-weight: 700;
+  font-size: 1rem;
+
+  transition: 0.2s;
+}
+
+#headerRight:hover {
+  opacity: 0.85;
+}
+
+#headerRight img {
+  margin-right: 0.75rem;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+form {
+  max-width: 736px;
+  margin: 4.75rem auto 0;
+  background: white;
+  border-radius: 0.5rem;
+
+  padding: 4rem;
+}
+
+form h1 {
+  font-size: 2.25rem;
+  line-height: 2.6rem;
+}
+
+form fieldset {
+  margin: 4rem 0;
+  border: none;
+}
+
+form fieldset legend {
+  font: 700 1.5rem 'Ubuntu', sans-serif;
+  line-height: 1.7rem;
+  color: var(--title);
+  margin-bottom: 2.6rem;
+}
+
+form fieldset legend span {
+  color: red;
+}
+
+form label {
+  display: block;
+  font: 400 0.875rem 'Roboto', sans-serif;
+  color: #6C6C80;
+  margin-bottom: 0.5rem;
+}
+
+form input {
+  height: 3.5rem;
+  background: #F0F0F5;
+  border-radius: 0.5rem;
+  border: none;
+}

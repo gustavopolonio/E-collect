@@ -1,0 +1,21 @@
+@media (max-width: 1098px) {
+  .pageHome {
+    background: none;
+  }
+
+  #container {
+    align-items: center;
+    text-align: center;
+  }
+
+  #headerRight {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  main {
+    align-items: center;
+  } 
+}

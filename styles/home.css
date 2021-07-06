@@ -36,8 +36,8 @@ header {
   height: 2.75rem;
 }
 
-#registerPointContainer {
-  font: 700 1rem 'Roboto', sans-serif;
+#headerRight {
+  font-weight: 700;
   display: flex;
   align-items: center;
   color: var(--title);
@@ -45,11 +45,11 @@ header {
   transition: 0.2s;
 }
 
-#registerPointContainer:hover {
+#headerRight:hover {
   opacity: 0.85;
 }
 
-#registerPointContainer img {
+#headerRight img {
   margin-right: 1rem;
   width: 1.5rem;
   height: 1.5rem;
@@ -69,14 +69,14 @@ main h1 {
 }
 
 main p {
-  font: 400 1.5rem 'Roboto', sans-serif;
+  font-size: 1.5rem;
   line-height: 2.4rem;
   color: var(--text);
   margin: 1.5rem 0 2.5rem;
 }
 
 main button {
-  font: 700 1rem 'Roboto', sans-serif;
+  font-weight: bold;
   color: #FFFFFF;
   background: var(--green);
   border: none;
@@ -120,26 +120,3 @@ main button strong {
   text-align: center;
 }
 
-
-@media (max-width: 1098px) {
-  .pageHome {
-    background: none;
-  }
-
-  #container {
-    align-items: center;
-    text-align: center;
-  }
-
-  #registerPointContainer {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  main {
-    align-items: center;
-  } 
-
-}

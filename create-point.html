@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="styles/create-point.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+
+    <title>E-collect</title>
+  </head>
+
+  <body>
+    <div id="page-create-point">
+      <header>
+        <a id="logoIcon" href="/">
+          <img src="assets/images/logo.svg" alt="E-collect" />
+        </a>
+
+        <a id="headerRight" href="/">
+          <img src="assets/images/back.svg" alt="iconBack" />
+          Back to home
+        </a>
+      </header>
+
+      <form>
+        <h1>
+          Collect point register
+        </h1>
+
+        <fieldset>
+          <legend>
+            Entity data
+          </legend>
+
+          <div class="entity-name-container">
+            <label for="entity-name">Entity name</label>
+            <input type="text">
+          </div>
+
+          <div class="address-container">
+            <div class="address">
+              <label for="address">Address</label>
+              <input type="text">
+            </div>
+            <div class="number">
+              <label for="number">Number</label>
+              <input type="number">
+            </div>
+          </div>
+
+          <div class="city-state-container">
+            <div class="city">
+              <label for="city">City</label>
+              <input type="text">
+            </div>
+            <div class="uf">
+              <label for="uf">State</label>
+              <input type="text">
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>
+            Collect items
+            <span>Pick one or more items bellow</span>
+          </legend>
+        </fieldset>
+      </form>
+    </div>
+
+  </body>
+</html>

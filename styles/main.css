@@ -17,6 +17,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+body, button, textarea, input {
+  font: 400 1rem 'Roboto', sans-serif;
+}
+
 button {
   cursor: pointer;
 }
