@@ -1,7 +1,31 @@
-.red {
-  background: red;
+:root {
+  --title: #322153;
+  --text: #6C6C80;
+  --green: #34CB79;
 }
 
-.white {
-  color: white;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  background: #E5E5E5;
+  height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  font-family: 'Ubuntu', sans-serif;
+  color: var(--title);
 }

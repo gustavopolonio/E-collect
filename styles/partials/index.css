@@ -1,0 +1,145 @@
+.pageHome {
+  height: 100%;
+  background: url("/assets/images/background.svg") no-repeat;
+
+  background-position: 95% 75%;
+  background-size: 29.3rem 32rem;
+}
+
+#container {
+  width: 90%; 
+  max-width: 1100px;
+  margin: 0 auto; 
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2.88rem;
+}
+
+#logoIcon {
+  transition: 0.2s;
+}
+
+#logoIcon:hover {
+  opacity: 0.85;
+}
+
+#logoIcon img {
+  width: 11.3rem;
+  height: 2.75rem;
+}
+
+#registerPointContainer {
+  font: 700 1rem 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
+  color: var(--title);
+
+  transition: 0.2s;
+}
+
+#registerPointContainer:hover {
+  opacity: 0.85;
+}
+
+#registerPointContainer img {
+  margin-right: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  max-width: 560px;
+}
+
+main h1 {
+  font-size: 3.38rem;
+  line-height: 4rem;
+}
+
+main p {
+  font: 400 1.5rem 'Roboto', sans-serif;
+  line-height: 2.4rem;
+  color: var(--text);
+  margin: 1.5rem 0 2.5rem;
+}
+
+main button {
+  font: 700 1rem 'Roboto', sans-serif;
+  color: #FFFFFF;
+  background: var(--green);
+  border: none;
+  border-radius: 0.5rem;
+  width: 19.5rem;
+  height: 4rem;
+
+  display: flex;
+  align-items: center;
+
+  transition: 0.3s;
+}
+
+main button:hover {
+  filter: brightness(0.8);
+}
+
+main button span {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.5rem 0 0 0.5rem;
+  background: #2FB86E;
+  display: inline-block;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main button span::after {
+  content: '';
+  background: url("/assets/images/search.svg");
+  width: 1.5rem;
+  height: 1.5rem;
+
+  background-size: 1.5rem 1.5rem;
+}
+
+main button strong {
+  flex: 1;
+  text-align: center;
+}
+
+
+@media (max-width: 1098px) {
+  .pageHome {
+    background: none;
+  }
+
+  #container {
+    align-items: center;
+    text-align: center;
+  }
+
+  #registerPointContainer {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  main {
+    align-items: center;
+  } 
+
+}
