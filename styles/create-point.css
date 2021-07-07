@@ -2,6 +2,7 @@
   width: 90%;
   max-width: 1100px;
   margin: 0 auto;
+  padding: 0.1px;
 }
 
 header {
@@ -46,7 +47,7 @@ header {
 
 form {
   max-width: 736px;
-  margin: 4.75rem auto 0;
+  margin: 4.75rem auto 7.5rem;
   background: white;
   border-radius: 0.5rem;
 
@@ -70,10 +71,6 @@ form fieldset legend {
   margin-bottom: 2.6rem;
 }
 
-form fieldset legend span {
-  color: red;
-}
-
 form label {
   display: block;
   font: 400 0.875rem 'Roboto', sans-serif;
@@ -86,4 +83,108 @@ form input {
   background: #F0F0F5;
   border-radius: 0.5rem;
   border: none;
+  width: 100%;
+
+  color: var(--text);
+  padding: 0 1.5rem;
+}
+
+.address-container,
+.city-state-container {
+  display: flex;
+  margin-top: 1.5rem;
+}
+
+.address-container .address {
+  margin-right: 1.5rem;
+  width: 80%;
+}
+
+.city-state-container .city {
+  margin-right: 1.5rem;
+  width: 100%;
+}
+
+.city-state-container .uf {
+  width: 100%;
+}
+
+
+form fieldset .collect-items-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.6rem;
+}
+
+form fieldset .collect-items-header legend {
+  margin-bottom: 0;
+}
+
+form fieldset .collect-items-header span {
+  font: 400 0.875rem 'Roboto', sans-serif;
+  color: var(--text);
+}
+
+form fieldset .collect-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+form .collect-items button {
+  height: 11.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--light-green);
+  border: none;
+  border-radius: 0.5rem;
+  padding-top: 2rem;
+
+  transition: filter 0.2s;
+}
+
+form .collect-items button:hover {
+  filter: brightness(0.9);
+}
+
+form .collect-items button img {
+  width: 4rem;
+  height: 4rem;
+}
+
+form .collect-items button span {
+  color: var(--title);
+  max-width: 120px;
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+
+form button.selected {
+  background: linear-gradient(to top, #E1FAEC, #FFFFFF);
+  border: 2px solid var(--green);
+}
+
+.register-button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.register-button-container button {
+  background: var(--green);
+  color: white;
+  width: 16.63rem;
+  height: 3.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-weight: bold;
+
+  transition: filter 0.2s;
+}
+
+.register-button-container button:hover {
+  filter: brightness(0.9);
 }
