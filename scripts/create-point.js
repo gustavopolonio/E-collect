@@ -38,17 +38,23 @@ stateSelectField.addEventListener("change", async (event) => {
 
 let selectedItems = [];
 
-function testando(event) {
-  const buttonClicked = event.currentTarget;
-  buttonClicked.classList.toggle("selected");
+const buttonsCollectItems = document.querySelectorAll(".collect-items button");
 
-  const IDbuttonClicked = buttonClicked.dataset.id;
-  const indexOfIdButton = selectedItems.indexOf(IDbuttonClicked);
-
-  indexOfIdButton !== -1 
-  ? selectedItems.splice(indexOfIdButton, 1)
-  : selectedItems.push(IDbuttonClicked);
-
-  itemsInputField.value = selectedItems;
+for (button of buttonsCollectItems) {
+  button.addEventListener("click", (event) => {
+    const buttonClicked = event.currentTarget;
+    buttonClicked.classList.toggle("selected");
+  
+    const IDbuttonClicked = buttonClicked.dataset.id;
+    const indexOfIdButton = selectedItems.indexOf(IDbuttonClicked);
+  
+    indexOfIdButton !== -1
+    ? selectedItems.splice(indexOfIdButton, 1)
+    : selectedItems.push(IDbuttonClicked);
+  
+    itemsInputField.value = selectedItems;
+  })
 }
+
+
 
