@@ -60,15 +60,14 @@ form h1 {
 }
 
 form fieldset {
-  margin: 4rem 0;
+  margin-top: 4rem;
   border: none;
 }
 
-form fieldset legend {
-  font: 700 1.5rem 'Ubuntu', sans-serif;
+form fieldset legend h2 {
+  font-size: 1.5rem;
   line-height: 1.7rem;
   color: var(--title);
-  margin-bottom: 2.6rem;
 }
 
 form label {
@@ -78,7 +77,8 @@ form label {
   margin-bottom: 0.5rem;
 }
 
-form input {
+form input,
+form select {
   height: 3.5rem;
   background: #F0F0F5;
   border-radius: 0.5rem;
@@ -89,24 +89,21 @@ form input {
   padding: 0 1.5rem;
 }
 
-.address-container,
-.city-state-container {
+.field-group {
   display: flex;
   margin-top: 1.5rem;
 }
 
-.address-container .address {
-  margin-right: 1.5rem;
-  width: 80%;
+fieldset > .field {
+  margin-top: 2.6rem;
 }
 
-.city-state-container .city {
-  margin-right: 1.5rem;
+.field {
   width: 100%;
 }
 
-.city-state-container .uf {
-  width: 100%;
+.field-group .field:first-child {
+  margin-right: 1.5rem;
 }
 
 
@@ -115,10 +112,6 @@ form fieldset .collect-items-header {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 2.6rem;
-}
-
-form fieldset .collect-items-header legend {
-  margin-bottom: 0;
 }
 
 form fieldset .collect-items-header span {
@@ -139,14 +132,14 @@ form .collect-items button {
   flex-direction: column;
   align-items: center;
   background: var(--light-green);
-  border: none;
+  border: 2px solid var(--light-green);
   border-radius: 0.5rem;
   padding-top: 2rem;
 
   transition: filter 0.2s;
 }
 
-form .collect-items button:hover {
+form button:not(.selected):hover {
   filter: brightness(0.9);
 }
 
@@ -168,9 +161,11 @@ form button.selected {
   border: 2px solid var(--green);
 }
 
+
 .register-button-container {
   display: flex;
   justify-content: flex-end;
+  margin-top: 4rem;
 }
 
 .register-button-container button {
@@ -181,10 +176,7 @@ form button.selected {
   border-radius: 0.5rem;
   border: none;
   font-weight: bold;
-
+  
   transition: filter 0.2s;
 }
 
-.register-button-container button:hover {
-  filter: brightness(0.9);
-}
