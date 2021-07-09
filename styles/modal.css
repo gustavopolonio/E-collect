@@ -1,0 +1,101 @@
+#modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: #0E0A14ef;
+
+  transition: 1s;
+}
+
+#modal.open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-container {
+  width: 26.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+}
+
+.modal-container header h1,
+.modal-container header a {
+  color: white;
+  font-size: 2.25rem;
+  line-height: 2.64rem;
+}
+
+.modal-container header a {
+  transition: filter 0.2s;
+  cursor: pointer;
+}
+
+.modal-container header a:hover {
+  filter: brightness(0.8);
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+form label {
+  margin-bottom: 0.5rem;
+  line-height: 1rem; 
+}
+
+form .search {
+  display: flex;
+}
+
+form input,
+form button {
+  height: 3.5rem;
+  border: none;
+}
+
+form input {
+  width: 80%;
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+form button {
+  width: 20%;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+form input {
+  background: white;
+  margin-bottom: 0.5rem;
+  padding: 1.18rem 1.5rem;
+}
+
+form button {
+  background: var(--green);
+  color: white;
+  font-weight: 700;
+  line-height: 1.17rem;
+
+  transition: filter 0.2s;
+}
+
+form button:hover {
+  filter: brightness(0.9);
+}

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/home.css">
     <link rel="stylesheet" href="/styles/responsive.css">
+    <link rel="stylesheet" href="/styles/modal.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
 
     <title>E-collect</title>
@@ -37,7 +38,7 @@
           <p>
             We help people to find collect points efficiently.
           </p>
-          <button>
+          <button onclick="toggleModal()">
             <span></span>
             <strong>
               Search collect points
@@ -49,6 +50,26 @@
       </div>
     </div>
 
+    <div id="modal">
+      <div class="modal-container">
+        <header>
+          <h1>Collect points</h1>
+          <a href="#" onclick="toggleModal()">x</a>
+        </header>
+
+        <form action="search-results.html">
+          <label for="search">City</label>
+          <div class="search field">
+            <input type="text" name="search" placeholder="Enter the city">
+            <button type="submit">
+              <img src="./assets/images/search.svg" alt="Search" />
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="./scripts/modal.js"></script>
   </body>
 </html>
 

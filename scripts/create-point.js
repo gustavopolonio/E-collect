@@ -1,7 +1,8 @@
 const stateSelectField = document.querySelector("select[name=uf]");
 const citySelectField = document.querySelector("select[name=city]");
 const stateInputField = document.querySelector("input[name=state]");
-const itemsInputField = document.querySelector("input[name=items]")
+const itemsInputField = document.querySelector("input[name=items]");
+const buttonsCollectItems = document.querySelectorAll(".collect-items button");
 
 async function populateUFs() {
   await fetch('https://servicodados.ibge.gov.br/api/v1/localidades/estados?orderBy=nome')
@@ -36,9 +37,8 @@ stateSelectField.addEventListener("change", async (event) => {
     })
 })
 
-let selectedItems = [];
 
-const buttonsCollectItems = document.querySelectorAll(".collect-items button");
+let selectedItems = [];
 
 for (button of buttonsCollectItems) {
   button.addEventListener("click", (event) => {
