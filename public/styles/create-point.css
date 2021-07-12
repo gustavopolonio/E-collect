@@ -89,6 +89,11 @@ form select {
   padding: 0 1.5rem;
 }
 
+form input::placeholder {
+  color: var(--text);
+  font-size: 0.87rem;
+}
+
 .field-group {
   display: flex;
   margin-top: 1.5rem;

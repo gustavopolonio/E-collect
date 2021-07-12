@@ -1,77 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+{% extends "layout.html" %}}
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% set pageId = "pageHome" %}}
 
-    <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="/styles/home.css">
-    <link rel="stylesheet" href="/styles/responsive.css">
-    <link rel="stylesheet" href="/styles/modal.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+{% block styles %}
+  <link rel="stylesheet" href="/styles/home.css">
+  <link rel="stylesheet" href="/styles/modal.css">
+{% endblock %}}
 
-    <title>E-collect</title>
-  </head>
 
-  <body>
-    <div class="pageHome">
-      <div id="container">
-        <header>
-          <a id="logoIcon" href="#">
-            <img src="/assets/images/logo.svg" alt="E-collect" />
-          </a>
+{% block content %}
+  <div id="container">
+    <header>
+      <a id="logoIcon" href="#">
+        <img src="/assets/images/logo.svg" alt="E-collect" />
+      </a>
 
-          <a id="headerRight" href="/create-point.html">
-            <img src="/assets/images/login.svg" alt="Login icon" />
-            Register a collect point
-          </a>
-        </header>
+      <a id="headerRight" href="/create-point">
+        <img src="/assets/images/login.svg" alt="Login icon" />
+        Register a collect point
+      </a>
+    </header>
 
-        <main>
-          <h1>
-            Your waste collection marketplace.
-          </h1>
-          <p>
-            We help people to find collect points efficiently.
-          </p>
-          <button onclick="toggleModal()">
-            <span></span>
-            <strong>
-              Search collect points
-            </strong>
-          </button>
+    <main>
+      <h1>
+        Your waste collection marketplace.
+      </h1>
+      <p>
+        We help people to find collect points efficiently.
+      </p>
+      <button onclick="toggleModal()">
+        <span></span>
+        <strong>
+          Search collect points
+        </strong>
+      </button>
 
-        </main>
+    </main>
 
-      </div>
-    </div>
+  </div>
+{% endblock content %}
 
-    <div id="modal">
-      <div class="modal-container">
-        <header>
-          <h1>Collect points</h1>
-          <a href="#" onclick="toggleModal()">x</a>
-        </header>
+{% block modal %}
+  {% include "partials/modal.html" %}
+{% endblock %}}
 
-        <form action="search-results.html">
-          <label for="search">City</label>
-          <div class="search field">
-            <input type="text" name="search" placeholder="Enter the city">
-            <button type="submit">
-              <img src="./assets/images/search.svg" alt="Search" />
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
+{% block scripts %}
+  <script src="/scripts/modal.js"></script>
+{% endblock %}
 
-    <script src="./scripts/modal.js"></script>
-  </body>
-</html>
 
 
 

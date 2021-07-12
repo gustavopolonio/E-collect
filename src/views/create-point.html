@@ -1,125 +1,113 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+{% extends "layout.html" %}
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% set pageId = "page-create-point" %}
 
-    <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="styles/create-point.css">
-    <link rel="stylesheet" href="styles/responsive.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+{% block styles %}
+  <link rel="stylesheet" href="styles/create-point.css">
+{% endblock %}}
 
-    <title>E-collect</title>
-  </head>
+{% block content %}
+  {% include "partials/page-header.html" %}
 
-  <body>
-    <div id="page-create-point">
-      <header>
-        <a id="logoIcon" href="/">
-          <img src="assets/images/logo.svg" alt="E-collect" />
-        </a>
+  <form>
+    <h1>
+      Collect point register
+    </h1>
 
-        <a id="headerRight" href="/">
-          <img src="assets/images/back.svg" alt="iconBack" />
-          Back to home
-        </a>
-      </header>
+    <fieldset>
+      <legend>
+        <h2>Entity data</h2>
+      </legend>
 
-      <form>
-        <h1>
-          Collect point register
-        </h1>
-
-        <fieldset>
-          <legend>
-            <h2>Entity data</h2>
-          </legend>
-
-          <div class="field">
-            <label for="name">Entity name</label>
-            <input type="text" name="name" required>
-          </div>
-
-          <div class="field-group">
-            <div class="field">
-              <label for="address">Address</label>
-              <input type="text" name="address" required>
-            </div>
-            <div class="field">
-              <label for="address-number">Number/Complement</label>
-              <input type="text" name="address-number" required>
-            </div>
-          </div>
-
-          <div class="field-group">
-            <div class="field">
-              <label for="uf">State</label>
-              <select name="uf" required>
-                <option value="">Choose your state</option>
-              </select>
-
-              <input type="hidden" name="state">
-            </div>
-            <div class="field">
-              <label for="city">City</label>
-              <select name="city" disabled required>
-                <option value="">Choose your city</option>
-              </select>
-            </div>
-          </div>
-        </fieldset>
-
-        <fieldset>
-          <div class="collect-items-header">
-            <legend>
-              <h2>Collect items</h2>
-            </legend>
-            <span>Pick one or more items bellow</span>
-          </div>
-
-          <div class="collect-items">
-            <button type="button" data-id="1">
-              <img src="./assets/images/lamps.svg" alt="Lamps" />
-              <span>Lamps</span>
-            </button>
-            <button type="button" data-id="2">
-              <img src="./assets/images/battery.svg" alt="Battery" />
-              <span>Battery</span>
-            </button>
-            <button type="button" data-id="3">
-              <img src="./assets/images/papers.svg" alt="Papers" />
-              <span>Papers and Cardboard</span>
-            </button>
-            <button type="button" data-id="4">
-              <img src="./assets/images/electronic.svg" alt="Electronic waste" />
-              <span>Electronic waste</span>
-            </button>
-            <button type="button" data-id="5">
-              <img src="./assets/images/organic.svg" alt="Organic waste" />
-              <span>Organic waste</span>
-            </button>
-            <button type="button" data-id="6">
-              <img src="./assets//images/oil.svg" alt="Kitchen oil" />
-              <span>Kitchen oil</span>
-            </button>
-
-            <input type="hidden" name="items">
-          </div>
-        </fieldset>
-
-        <div class="register-button-container">
-          <button type="submit">
-            Register collect point
-          </button>
+      <div class="field-group">
+        <div class="field">
+          <label for="name">Entity name</label>
+          <input type="text" name="name" required>
         </div>
 
-      </form>
+        <div class="field">
+          <label for="name">Entity image</label>
+          <input type="url" name="image" placeholder="Start with http://" required>
+        </div>
+      </div>
+
+      <div class="field-group">
+        <div class="field">
+          <label for="address">Address</label>
+          <input type="text" name="address" required>
+        </div>
+        <div class="field">
+          <label for="address-number">Number/Complement</label>
+          <input type="text" name="address-number" required>
+        </div>
+      </div>
+
+      <div class="field-group">
+        <div class="field">
+          <label for="uf">State</label>
+          <select name="uf" required>
+            <option value="">Choose your state</option>
+          </select>
+
+          <input type="hidden" name="state">
+        </div>
+        <div class="field">
+          <label for="city">City</label>
+          <select name="city" disabled required>
+            <option value="">Choose your city</option>
+          </select>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <div class="collect-items-header">
+        <legend>
+          <h2>Collect items</h2>
+        </legend>
+        <span>Pick one or more items bellow</span>
+      </div>
+
+      <div class="collect-items">
+        <button type="button" data-id="1">
+          <img src="./assets/images/lamps.svg" alt="Lamps" />
+          <span>Lamps</span>
+        </button>
+        <button type="button" data-id="2">
+          <img src="./assets/images/battery.svg" alt="Battery" />
+          <span>Battery</span>
+        </button>
+        <button type="button" data-id="3">
+          <img src="./assets/images/papers.svg" alt="Papers" />
+          <span>Papers and Cardboard</span>
+        </button>
+        <button type="button" data-id="4">
+          <img src="./assets/images/electronic.svg" alt="Electronic waste" />
+          <span>Electronic waste</span>
+        </button>
+        <button type="button" data-id="5">
+          <img src="./assets/images/organic.svg" alt="Organic waste" />
+          <span>Organic waste</span>
+        </button>
+        <button type="button" data-id="6">
+          <img src="./assets//images/oil.svg" alt="Kitchen oil" />
+          <span>Kitchen oil</span>
+        </button>
+
+        <input type="hidden" name="items">
+      </div>
+    </fieldset>
+
+    <div class="register-button-container">
+      <button type="submit">
+        Register collect point
+      </button>
     </div>
-    
-    <script src="./scripts/create-point.js"></script>
-  </body>
-</html>
+
+  </form>
+{% endblock content %}
+
+{% block scripts %}
+  <script src="./scripts/create-point.js"></script>
+
+{% endblock %}
