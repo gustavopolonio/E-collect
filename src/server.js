@@ -25,10 +25,41 @@ server.get('/create-point', (request, response) => {
 })
 
 server.post('/savepoint', (request, response) => {
-
   console.log(request.body);
 
-  return response.send("Hello");
+  // Insert data in database
+  const query = `
+    INSERT INTO places (
+      image,
+      name,
+      address,
+      address2,
+      state,
+      city,
+      items
+    ) VALUES (?,?,?,?,?,?,?);
+  `;
+
+  const values = [
+    request.body.image,
+    request.body.name,
+    request.body.address,
+    request.body.address2,
+    request.body.state,
+    request.body.city,
+    request.body.items
+  ];
+
+  function afterInsertData(err) {
+    if (err) {
+      return console.log(err);
+    }
+
+    console.log("Inserted data successfully.");
+    return response.send("Hello");
+  }
+
+  db.run(query, values, afterInsertData);
 })
 
 
