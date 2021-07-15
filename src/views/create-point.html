@@ -4,6 +4,7 @@
 
 {% block styles %}
   <link rel="stylesheet" href="styles/create-point.css">
+  <link rel="stylesheet" href="styles/point-created-modal.css">
 {% endblock %}
 
 {% block content %}
@@ -106,6 +107,14 @@
 
   </form>
 {% endblock content %}
+
+
+{% block modal %}
+  {% if saved %}
+      {% include "partials/point-created-modal.html" %}
+  {% endif %}
+{% endblock modal %}
+
 
 {% block scripts %}
   <script src="./scripts/create-point.js"></script>
