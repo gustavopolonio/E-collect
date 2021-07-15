@@ -1,5 +1,7 @@
 import express from "express";
 import nunjucks from "nunjucks";
+import { db } from "./database/db.js";
+
 
 const server = express();
 const port = 3000;
@@ -20,7 +22,18 @@ server.get('/create-point', (request, response) => {
 })
 
 server.get('/search', (request, response) => {
-  return response.render("search-results.html");
+
+  // Query data from table places
+  db.all(`SELECT * FROM places`, function(err, rows) {
+    if (err) {
+      console.log(err);
+    }
+
+    const totalPlaces = rows.length;
+
+    return response.render("search-results.html", { places: rows, total: totalPlaces });
+  })
+
 })
 
 

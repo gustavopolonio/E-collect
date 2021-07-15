@@ -4,40 +4,38 @@
 
 {% block styles %}
   <link rel="stylesheet" href="styles/search-results.css">
-{% endblock %}}
+{% endblock %}
 
 {% block content %}
   {% include "partials/page-header.html" %}
 
   <main>
-    <span><strong>2 pontos </strong>encontrados</span>
+    {% if total > 0 %}
+      <span><strong>{{ total }} pontos </strong>encontrados</span>
 
-    <div class="cards">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1604187351574-c75ca79f5807?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80" alt="Colectoria" />
-        <h1>Colectoria</h1>
-        <h2>Electronic waste,</br>Lamps</h2>
-        <p>
-          Rio do Sul, Santa Catarina </br>
-          Guilhemre Botelho, Jardim América </br>
-          N° 260
-        </p>
+      <div class="cards">
+
+        {% for place in places %}
+          <div class="card">
+              <img src="{{ place.image }}" alt="{{ place.name }}" />
+              <h1>{{ place.name }}</h1>
+              <h2>{{ place.items }}</h2>
+              <p>
+                {{ place.city }}, {{ place.state }} </br>
+                {{ place.address }} </br>
+                {{ place.address2 }}
+              </p>
+            </div>
+        {% endfor %}
+        
       </div>
 
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1567393528677-d6adae7d4a0a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8cmVjeWNsZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Papersider" />
-        <h1>Papersider</h1>
-        <h2>Paper and Carboard</h2>
-        <p>
-          Rio do Sul, Santa Catarina </br>
-          Guilhemre Botelho, Jardim América </br>
-          N° 260
-        </p>
-      </div>
+    {% else %}
+
+      <span><strong>Nenhum ponto </strong>encontrado</span>
+
+    {% endif %}
 
 
-    </div>
   </main>
 {% endblock content %}
-
-
