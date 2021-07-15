@@ -5,6 +5,8 @@ import { db } from "./database/db.js";
 
 const server = express();
 const port = 3000;
+server.use(express.json());
+server.use(express.urlencoded({ extend: true }));
 
 nunjucks.configure('src/views/', {
   noCache: true,
@@ -18,8 +20,17 @@ server.get('/', (request, response) => {
 })
 
 server.get('/create-point', (request, response) => {
+
   return response.render("create-point.html");
 })
+
+server.post('/savepoint', (request, response) => {
+
+  console.log(request.body);
+
+  return response.send("Hello");
+})
+
 
 server.get('/search', (request, response) => {
 

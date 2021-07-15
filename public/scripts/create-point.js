@@ -45,12 +45,12 @@ for (button of buttonsCollectItems) {
     const buttonClicked = event.currentTarget;
     buttonClicked.classList.toggle("selected");
   
-    const IDbuttonClicked = buttonClicked.dataset.id;
-    const indexOfIdButton = selectedItems.indexOf(IDbuttonClicked);
+    const itemButtonClicked = buttonClicked.dataset.id;
+    const indexOfIdButton = selectedItems.indexOf(itemButtonClicked);
   
     indexOfIdButton !== -1
     ? selectedItems.splice(indexOfIdButton, 1)
-    : selectedItems.push(IDbuttonClicked);
+    : selectedItems.push(itemButtonClicked);
   
     itemsInputField.value = selectedItems;
   })

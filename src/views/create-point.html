@@ -4,12 +4,12 @@
 
 {% block styles %}
   <link rel="stylesheet" href="styles/create-point.css">
-{% endblock %}}
+{% endblock %}
 
 {% block content %}
   {% include "partials/page-header.html" %}
 
-  <form>
+  <form action="/savepoint" method="POST">
     <h1>
       Collect point register
     </h1>
@@ -37,8 +37,8 @@
           <input type="text" name="address" required>
         </div>
         <div class="field">
-          <label for="address-number">Number/Complement</label>
-          <input type="text" name="address-number" required>
+          <label for="address2">Number/Complement</label>
+          <input type="text" name="address2" required>
         </div>
       </div>
 
@@ -69,27 +69,27 @@
       </div>
 
       <div class="collect-items">
-        <button type="button" data-id="1">
+        <button type="button" data-id="Lamps">
           <img src="./assets/images/lamps.svg" alt="Lamps" />
           <span>Lamps</span>
         </button>
-        <button type="button" data-id="2">
+        <button type="button" data-id="Battery">
           <img src="./assets/images/battery.svg" alt="Battery" />
           <span>Battery</span>
         </button>
-        <button type="button" data-id="3">
+        <button type="button" data-id="Papers and Cardboard">
           <img src="./assets/images/papers.svg" alt="Papers" />
           <span>Papers and Cardboard</span>
         </button>
-        <button type="button" data-id="4">
+        <button type="button" data-id="Electronic waste">
           <img src="./assets/images/electronic.svg" alt="Electronic waste" />
           <span>Electronic waste</span>
         </button>
-        <button type="button" data-id="5">
+        <button type="button" data-id="Organic waste">
           <img src="./assets/images/organic.svg" alt="Organic waste" />
           <span>Organic waste</span>
         </button>
-        <button type="button" data-id="6">
+        <button type="button" data-id="Kitchen oil">
           <img src="./assets//images/oil.svg" alt="Kitchen oil" />
           <span>Kitchen oil</span>
         </button>
