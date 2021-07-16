@@ -1,7 +1,7 @@
 # E-collect
 
 <p align="center">
-   <img src="https://github.com/gustavopolonio/proffy-web/blob/master/.vscode/web.png" width="760"/>
+   <img src="https://github.com/gustavopolonio/E-collect/blob/main/.github/web.png" width="760"/>
 </p>
 
 # :pushpin: Table of Contents
