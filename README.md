@@ -33,7 +33,7 @@ and a editor to work with the code (I use [VSCode](https://code.visualstudio.com
 ```bash
 
 # Clone this repository via HTTPS:
-$ https://github.com/gustavopolonio/E-collect.git
+$ git clone https://github.com/gustavopolonio/E-collect.git
 
 # Go into the repository:
 $ cd E-collect
@@ -42,7 +42,7 @@ $ cd E-collect
 $ yarn install
 
 # Start the application in a development environment:
-$ yarn dev
+$ yarn install
 
 ```
 
