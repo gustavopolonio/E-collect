@@ -6,7 +6,7 @@ import { db } from "./database/db.js";
 const server = express();
 const port = 3000;
 server.use(express.json());
-server.use(express.urlencoded({ extend: true }));
+server.use(express.urlencoded({ extended: true }));
 
 nunjucks.configure('src/views/', {
   noCache: true,
