@@ -57,7 +57,7 @@ server.post('/savepoint', (request, response) => {
     }
 
     console.log("Inserted data successfully.");
-    return response.render("/create-point.html", { saved: true });
+    return response.render("create-point.html", { saved: true });
   }
 
   db.run(query, values, afterInsertData);
@@ -65,9 +65,15 @@ server.post('/savepoint', (request, response) => {
 
 
 server.get('/search', (request, response) => {
+  const search = request.query.search;
 
-  // Query data from table places
-  db.all(`SELECT * FROM places`, function(err, rows) {
+  // Check if search is empty
+  if (search === "") {
+    return response.render("search-results.html", { total: 0 });
+  }
+
+  // Query data from table places if search isn't empty
+  db.all(`SELECT * FROM places WHERE city LIKE '%${search}%'`, function(err, rows) {
     if (err) {
       console.log(err);
     }

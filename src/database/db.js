@@ -12,7 +12,7 @@ export const db = new sqlite3Verbose.Database("./src/database/database.db", (err
 });
 
 
-//   db.serialize(() => {
+  // db.serialize(() => {
 //     // Create table
 //     db.run(`
 //       CREATE TABLE IF NOT EXISTS places (
@@ -45,8 +45,8 @@ export const db = new sqlite3Verbose.Database("./src/database/database.db", (err
 //       "Papersider",
 //       "Guilhemre Botelho, Jardim América",
 //       "N° 260",
-//       "Rio do Sul",
 //       "Santa Catarina",
+//       "Rio do Sul",
 //       "Paper and Carboard"
 //     ];
 
@@ -63,14 +63,14 @@ export const db = new sqlite3Verbose.Database("./src/database/database.db", (err
 //     // db.run(query, values, afterInsertData);
 
 //     // Query data from table
-//     // db.all(`SELECT * FROM places`, function(err, rows) {
-//     //   if (err) {
-//     //     throw err;
-//     //   }
+    // db.all(`SELECT * FROM places`, function(err, rows) {
+    //   if (err) {
+    //     throw err;
+    //   }
 
-//     //   console.log("Your data are bellow:");
-//     //   console.log(rows);
-//     // })
+    //   console.log("Your data are bellow:");
+    //   console.log(rows);
+    // })
 
 //     // Delete data from table
 //     // db.run(`DELETE FROM places WHERE id = ?`, 1, function(err) {
@@ -82,7 +82,7 @@ export const db = new sqlite3Verbose.Database("./src/database/database.db", (err
 //     //   console.log(this);
 //     // })
 
-//   });
+  // });
 
 
 
