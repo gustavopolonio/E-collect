@@ -33,7 +33,6 @@
     bottom: 2.88rem;
   }
 
-
   main .hero-container {
     display: block;
     margin-bottom: 3.88rem;
@@ -48,6 +47,7 @@
     display: none;
   }
 }
+
 
 @media (max-width: 465px) {
   main .hero-container {
