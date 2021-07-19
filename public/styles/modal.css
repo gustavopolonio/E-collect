@@ -99,3 +99,16 @@ form button {
 form button:hover {
   filter: brightness(0.9);
 }
+
+
+@media (max-width: 460px) {
+  .modal-container {
+    width: 17.5rem;
+  }
+
+  .modal-container header h1,
+  .modal-container header a {
+    font-size: 1.9125rem;
+    line-height: 2.224rem;
+  }
+}

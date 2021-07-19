@@ -30,3 +30,10 @@
   color: white;
   line-height: 2.63rem;
 }
+
+@media (max-width: 340px) {
+  .modal-container span {
+    display: block;
+    text-align: center;
+  }
+}
