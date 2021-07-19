@@ -1,9 +1,9 @@
 #pageHome {
   height: 100%;
-  background: url("/assets/images/background.svg") no-repeat;
+  /* background: url("/assets/images/background.svg") no-repeat;
 
   background-position: 95% 75%;
-  background-size: 29.3rem 32rem;
+  background-size: 29.3rem 32rem; */
 }
 
 #container {
@@ -56,6 +56,18 @@
 }
 
 main {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+main .hero-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+main .hero-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -120,3 +132,12 @@ main button strong {
   text-align: center;
 }
 
+main .hero-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main .hero-image img {
+  width: 80%;
+}

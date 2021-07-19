@@ -87,5 +87,5 @@ server.get('/search', (request, response) => {
 
 
 server.listen(port, () => {
-  console.log("Listening server!")
+  console.log(`Listening server on ${port}!`)
 })
