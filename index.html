@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "./src/views/layout.html" %}
 
 {% set pageId = "pageHome" %}
 
@@ -50,13 +50,13 @@
 {% endblock content %}
 
 {% block modal %}
-  {% include "partials/modal.html" %}
+  {% include "./src/views/partials/modal.html" %}
 {% endblock %}
 
 
 {% block modalError %}
   {% if error %}
-    {% include "partials/modal-error.html" %}
+    {% include "./src/views/partials/modal-error.html" %}
   {% endif %}
 {% endblock %}
 

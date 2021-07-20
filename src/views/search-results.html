@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "./layout.html" %}
 
 {% set pageId = "page-search-results" %}
 
@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block content %}
-  {% include "partials/page-header.html" %}
+  {% include "./partials/page-header.html" %}
 
   <main>
     {% if total > 0 %}

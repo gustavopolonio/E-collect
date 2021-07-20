@@ -8,7 +8,7 @@ const port = 3000;
 server.use(express.json());
 server.use(express.urlencoded({ extended: true }));
 
-nunjucks.configure('src/views/', {
+nunjucks.configure('./', {
   noCache: true,
   express: server
 })
@@ -21,7 +21,7 @@ server.get('/', (request, response) => {
 
 server.get('/create-point', (request, response) => {
 
-  return response.render("create-point.html");
+  return response.render("src/views/create-point.html");
 })
 
 server.post('/savepoint', (request, response) => {
@@ -53,11 +53,11 @@ server.post('/savepoint', (request, response) => {
   function afterInsertData(err) {
     if (err) {
       console.log(err);
-      return response.render("create-point.html", { error: true });
+      return response.render("src/views/create-point.html", { error: true });
     }
 
     console.log("Inserted data successfully.");
-    return response.render("create-point.html", { saved: true });
+    return response.render("src/views/create-point.html", { saved: true });
   }
 
   db.run(query, values, afterInsertData);
@@ -69,7 +69,7 @@ server.get('/search', (request, response) => {
 
   // Check if search is empty
   if (search === "") {
-    return response.render("search-results.html", { total: 0 });
+    return response.render("src/views/search-results.html", { total: 0 });
   }
 
   // Query data from table places if search isn't empty
@@ -81,7 +81,7 @@ server.get('/search', (request, response) => {
 
     const totalPlaces = rows.length;
 
-    return response.render("search-results.html", { places: rows, total: totalPlaces });
+    return response.render("src/views/search-results.html", { places: rows, total: totalPlaces });
   })
 
 })
