@@ -1,6 +1,10 @@
 # E-collect
 
 <p align="center">
+   <img src="https://github.com/gustavopolonio/E-collect/blob/main/.github/mobile.png" width="760"/>
+</p>
+
+<p align="center">
    <img src="https://github.com/gustavopolonio/E-collect/blob/main/.github/web.png" width="760"/>
 </p>
 
@@ -14,7 +18,7 @@
 
 # :book: About this Project
 
-This is a marketplace to help people find waste collection points efficiently.
+This is a full responsive marketplace to help people find waste collection points efficiently.
 
 The project ideia was taken from [Rocketseat](https://rocketseat.com.br/) NLW and is part of my personal portfolio, so I would appreciate if you provide me any 
 feedback about the ideia, code, structure or anything you could report to make me a better developer.
@@ -24,6 +28,8 @@ Feel free to use the E-collect as you wish, either to study or make improvemente
 # :rocket: Features 
 - :office: Register your collect point informing the name, address and the items that your entity collects.
 - :mag: Search for collect points in any city from Brazil.
+- :blue_book: The [IBGE api](https://servicodados.ibge.gov.br/api/docs/localidades) provides all states and cities from Brazil.
+- :iphone: E-collect is full responsive to serve well web and mobile.
 
 # :construction_worker: How to Use
 
