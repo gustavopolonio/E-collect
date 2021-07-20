@@ -53,7 +53,7 @@ server.post('/savepoint', (request, response) => {
   function afterInsertData(err) {
     if (err) {
       console.log(err);
-      return response.send("Erro no cadastro.");
+      return response.render("create-point.html", { error: true });
     }
 
     console.log("Inserted data successfully.");
@@ -76,6 +76,7 @@ server.get('/search', (request, response) => {
   db.all(`SELECT * FROM places WHERE city LIKE '%${search}%'`, function(err, rows) {
     if (err) {
       console.log(err);
+      return response.render("index.html", { error: true });
     }
 
     const totalPlaces = rows.length;

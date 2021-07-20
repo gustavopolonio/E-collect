@@ -1,12 +1,12 @@
-{% extends "layout.html" %}}
+{% extends "layout.html" %}
 
-{% set pageId = "pageHome" %}}
+{% set pageId = "pageHome" %}
 
 {% block styles %}
   <link rel="stylesheet" href="/styles/home.css">
   <link rel="stylesheet" href="/styles/modal.css">
   <link rel="stylesheet" href="/styles/responsive-home.css">
-{% endblock %}}
+{% endblock %}
 
 
 {% block content %}
@@ -51,7 +51,15 @@
 
 {% block modal %}
   {% include "partials/modal.html" %}
-{% endblock %}}
+{% endblock %}
+
+
+{% block modalError %}
+  {% if error %}
+    {% include "partials/modal-error.html" %}
+  {% endif %}
+{% endblock %}
+
 
 {% block scripts %}
   <script src="/scripts/modal.js"></script>

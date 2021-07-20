@@ -3,8 +3,9 @@
 {% set pageId = "page-create-point" %}
 
 {% block styles %}
-  <link rel="stylesheet" href="styles/create-point.css">
-  <link rel="stylesheet" href="styles/point-created-modal.css">
+  <link rel="stylesheet" href="/styles/create-point.css">
+  <link rel="stylesheet" href="/styles/point-created-modal.css">
+  <link rel="stylesheet" href="/styles/modal.css">
   <link rel="stylesheet" href="/styles/responsive-pages.css">
 {% endblock %}
 
@@ -115,6 +116,13 @@
       {% include "partials/point-created-modal.html" %}
   {% endif %}
 {% endblock modal %}
+
+
+{% block modalError %}
+  {% if error %}
+    {% include "partials/modal-error.html" %}
+  {% endif %}
+{% endblock %}
 
 
 {% block scripts %}
