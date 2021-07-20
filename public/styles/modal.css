@@ -68,45 +68,45 @@ header {
   filter: brightness(0.8);
 }
 
-form {
+#modal form {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-form label {
+#modal form label {
   margin-bottom: 0.5rem;
   line-height: 1rem; 
 }
 
-form .search {
+#modal form .search {
   display: flex;
 }
 
-form input,
-form button {
+#modal form input,
+#modal form button {
   height: 3.5rem;
   border: none;
 }
 
-form input {
+#modal form input {
   width: 80%;
   border-radius: 0.5rem 0 0 0.5rem;
 }
 
-form button.modal-button {
+#modal form button.modal-button {
   width: 20%;
   border-radius: 0 0.5rem 0.5rem 0;
 }
 
-form input {
+#modal form input {
   background: white;
   margin-bottom: 0.5rem;
   padding: 1.18rem 1.5rem;
 }
 
-form button {
+#modal form button {
   background: var(--green);
   color: white;
   font-weight: 700;
@@ -115,7 +115,7 @@ form button {
   transition: filter 0.2s;
 }
 
-form button:hover {
+#modal form button:hover {
   filter: brightness(0.9);
 }
 
