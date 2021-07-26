@@ -48,7 +48,7 @@ $ cd E-collect
 $ yarn install
 
 # Start the application in a development environment:
-$ yarn install
+$ yarn start
 
 ```
 
