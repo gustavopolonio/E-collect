@@ -47,20 +47,10 @@ $ cd E-collect
 # Install dependencies:
 $ yarn install
 
-```
-
-Create your enviroment variables based on the examples of `.env.example`
-
-```bash
-cp .env.example .env
-```
-
-After copying the examples, make sure to fill the variables with new values.
-
-** Start the application in a development environment: **
+# Start the application in a development environment:
 $ yarn start
 
-
+```
 
 # :computer: Technologies
 
